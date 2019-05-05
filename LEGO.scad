@@ -10,7 +10,7 @@
 block_width = 2;
 
 // Length of the block, in studs
-block_length = 6;
+block_length = 4;
 
 // Height of the block. A ratio of "1" is a standard LEGO brick height; a ratio of "1/3" is a standard LEGO plate height; "1/2" is a standard DUPLO plate.
 block_height_ratio = 1; // [.33333333333:1/3, .5:1/2, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 8:8, 9:9, 10:10]
@@ -89,7 +89,7 @@ dual_bottom = "no"; // [no:No, yes:Yes]
 /* [Printer-Specific] */
 
 // Should extra reinforcement be included to make printing on an FDM printer easier? Ignored for tiles, since they're printed upside-down and don't need the reinforcement. Recommended for block heights less than 1 or for Duplo bricks. 
-use_reinforcement = "no"; // [no:No, yes:Yes]
+use_reinforcement = "yes"; // [no:No, yes:Yes]
 
 // If your printer prints the blocks correctly except for the stud diameter, use this variable to resize just the studs for your printer. A value of 1.05 will print the studs 105% wider than standard.
 stud_rescale = 1;
