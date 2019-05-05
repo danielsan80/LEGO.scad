@@ -89,10 +89,10 @@ dual_bottom = "no"; // [no:No, yes:Yes]
 /* [Printer-Specific] */
 
 // Should extra reinforcement be included to make printing on an FDM printer easier? Ignored for tiles, since they're printed upside-down and don't need the reinforcement. Recommended for block heights less than 1 or for Duplo bricks. 
-use_reinforcement = "yes"; // [no:No, yes:Yes]
+use_reinforcement = "no"; // [no:No, yes:Yes]
 
 // If your printer prints the blocks correctly except for the stud diameter, use this variable to resize just the studs for your printer. A value of 1.05 will print the studs 105% wider than standard.
-stud_rescale = 1;
+stud_rescale = 0.95;
 //stud_rescale = 1.0475 * 1; // Orion Delta, T-Glase
 //stud_rescale = 1.022 * 1; // Orion Delta, ABS
 
@@ -155,14 +155,14 @@ module block(
     dual_bottom=false
     ) {
     post_wall_thickness = (brand == "lego" ? 0.85 : 1);
-    wall_thickness=(brand == "lego" ? 1.45 : 1.5);
+    wall_thickness=(brand == "lego" ? 1.25 : 1.5);
     stud_diameter=(brand == "lego" ? 4.85 : 9.35);
     hollow_stud_inner_diameter = (brand == "lego" ? 3.1 : 6.7);
     stud_height=(brand == "lego" ? 1.8 : 4.4);
     stud_spacing=(brand == "lego" ? 8 : 8 * 2);
     block_height=(brand == "lego" ? (type == "baseplate" ? 1.3 : 9.6) : 9.6 * 2);
     pin_diameter=(brand == "lego" ? 3 : 3 * 2);
-    post_diameter=(brand == "lego" ? 6.5 : 13.2);
+    post_diameter=(brand == "lego" ? 6.3 : 13.2);
     cylinder_precision=(brand == "lego" ? 0.1 : 0.05);
     reinforcing_width = (brand == "lego" ? 0.7 : 1);
 
